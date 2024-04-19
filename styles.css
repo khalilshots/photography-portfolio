@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.HomeHeader{
+    background: black;
+    padding: 10px 20px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HomeHeader a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: auto;
+    white-space: nowrap;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 75vhpx;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.statement {
+    position: absolute;
+    max-width: 80%;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content, .submenu-content {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a, .submenu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content, .submenu:hover .submenu-content {
+    display: block;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu-content {
+    top: 0;
+    left: 100%;  /* Ensures the submenu appears to the right of the "Final" link */
+}
