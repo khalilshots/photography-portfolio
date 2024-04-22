@@ -49,12 +49,19 @@ section {
     transform: translate(-50%, -50%); 
 }
 
+.statement .name {
+    display: block; /* Ensures the name appears on its own line */
+    font-size: 18px; /* Larger font size for emphasis */
+    font-weight: bold; /* Makes the name bold */
+    margin-bottom: 10px; /* Adds space between the name and the paragraph */
+}
+
 @media (max-width: 1000px) {
     .statement {
-        max-width: 450px; 
-        
+        max-width: 450px; /* Adjust based on your responsive design needs */
     }
 }
+
 
 .dropdown {
     position: relative;
