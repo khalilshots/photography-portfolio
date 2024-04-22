@@ -49,9 +49,10 @@ section {
     transform: translate(-50%, -50%); 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .statement {
-        max-width: 250px; 
+        max-width: 450px; 
+        
     }
 }
 
