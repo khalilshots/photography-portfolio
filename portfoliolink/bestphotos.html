@@ -1,11 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Showcase</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+    }
+    header {
+        width: 100%;
+        box-sizing: border-box;
+        background: black;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .HomeHeader {
+        width: 100%; /* Ensures the .HomeHeader takes full width of its parent */
+        display: flex;
+        justify-content: space-between; /* Distributes space between navigation items */
+        align-items: center; /* Vertically centers the navigation items */
+    }
+    .HomeHeader a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content, .submenu-content {
+        display: none;
+        position: absolute;
+        background-color: grey;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 100;
+    }
+    .dropdown:hover .dropdown-content, .submenu:hover .submenu-content {
+        display: block;
+    }
+    .submenu-content {
+        top: 100%; /* Aligns submenu directly below the menu item */
+        left: 0; /* Aligns the submenu with the start of the dropdown */
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 10px;
+        justify-content: center;
+    }
+    .photo {
+        flex: 0 1 calc(33.333% - 10px);
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .photo:hover {
+        transform: scale(1.05);
+    }
+</style>
 </head>
 <body>
-    STILL UPDATING PLEASE COME BACK SOON :)
+    <header> 
+        <nav class="HomeHeader">
+            <a href="home.html">HOME</a>
+            <div class="dropdown">
+                <a href="portfolio.html" class="dropbtn">PORTFOLIO</a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="final.html" class="submenubtn">Final</a>
+                        <div class="submenu-content">
+                            <a href="storyboard.html">Storyboard</a>
+                            <a href="moodboard.html">Moodboard</a>
+                        </div>
+                    </div>
+                    <a href="midterm.html">Midterm</a>
+                    <a href="bestphotos.html">Best Photos</a>
+                </div>
+            </div>
+            <a href="aboutme.html">ABOUT ME</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+    <div class="gallery">
+        <div class="photo" style="background-image: url('/images/5cigembraace.jpg');"></div>
+        <div class="photo" style="background-image: url('/images/6.JPG');"></div>
+        <div class="photo" style="background-image: url('/images/camerarawretouch2.jpg');"></div>
+        <div class="photo" style="background-image: url('/images/EYES.jpg');"></div>
+        <div class="photo" style="background-image: url('/images/framing.JPG');"></div>
+        <div class="photo" style="background-image: url('/images/IMG_0662.jpg');"></div>
+    </div>
+    <header> 
+        <nav class="HomeHeader">
+            <a href="home.html">HOME</a>
+            <div class="dropdown">
+                <a href="portfolio.html" class="dropbtn">PORTFOLIO</a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="final.html" class="submenubtn">Final</a>
+                        <div class="submenu-content">
+                            <a href="storyboard.html">Storyboard</a>
+                            <a href="moodboard.html">Moodboard</a>
+                        </div>
+                    </div>
+                    <a href="midterm.html">Midterm</a>
+                    <a href="bestphotos.html">Best Photos</a>
+                </div>
+            </div>
+            <a href="aboutme.html">ABOUT ME</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
 </body>
 </html>
