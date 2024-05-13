@@ -4,31 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Photo Showcase</title>
-<link rel="stylesheet" href="/styles.css">
 <style>
     body {
         margin: 0;
         padding: 0;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
         min-height: 100vh;
         background-color: #f4f4f4;
     }
     header {
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        transform: translateX(-50%);
-        box-sizing: border-box;
-    }
-    .main-content {
         width: 100%;
+        box-sizing: border-box;
+        background: black;
+        padding: 10px 20px;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
+    }
+    .HomeHeader {
+        width: 100%; /* Ensures the .HomeHeader takes full width of its parent */
+        display: flex;
+        justify-content: space-between; /* Distributes space between navigation items */
+        align-items: center; /* Vertically centers the navigation items */
+    }
+    .HomeHeader a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content, .submenu-content {
+        display: none;
+        position: absolute;
+        background-color: grey;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 100;
+    }
+    .dropdown:hover .dropdown-content, .submenu:hover .submenu-content {
+        display: block;
+    }
+    .submenu-content {
+        top: 100%; /* Aligns submenu directly below the menu item */
+        left: 0; /* Aligns the submenu with the start of the dropdown */
     }
     .gallery {
         display: flex;
@@ -38,7 +60,7 @@
         justify-content: center;
     }
     .photo {
-        flex: 0 1 calc(33.333% - 10px); /* Adjust the width to 33.333% for 3 photos per row */
+        flex: 0 1 calc(33.333% - 10px);
         height: 500px;
         background-size: cover;
         background-position: center;
@@ -54,7 +76,7 @@
 <body>
     <header> 
         <nav class="HomeHeader">
-            <a href="/home.html">HOME</a>
+            <a href="home.html">HOME</a>
             <div class="dropdown">
                 <a href="final.html" class="dropbtn">PORTFOLIO</a>
                 <div class="dropdown-content">
@@ -69,37 +91,21 @@
                     <a href="bestphotos.html">Best Photos</a>
                 </div>
             </div>
-            <a href="/aboutme.html">ABOUT ME</a>
-            <a href="/contact.html">CONTACT</a>
+            <a href="aboutme.html">ABOUT ME</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
     </header>
-    <div class="main-content">
-        <div class="gallery">
-            <!-- First row -->
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0557.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0561.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/Screenshot 2024-05-13 at 4.20.44 PM.jpeg');"></div>
-            <!-- Second row -->
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0563.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0564.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0560.jpg');"></div>
-            <!-- Third row -->
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0566.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0559.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0562.JPG');"></div>
-            <!-- Fourth row -->
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0597.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0585.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0583.jpg');"></div>
-            <!-- Final row -->
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0662.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0648.jpg');"></div>
-            <div class="photo" style="background-image: url('/midtermimages/IMG_0628.png');"></div>
-        </div>
+    <div class="gallery">
+        <div class="photo" style="background-image: url('/images/5cigembraace.jpg');"></div>
+        <div class="photo" style="background-image: url('/images/6.JPG');"></div>
+        <div class="photo" style="background-image: url('/images/camerarawretouch2.jpg');"></div>
+        <div class="photo" style="background-image: url('/images/EYES.jpg');"></div>
+        <div class="photo" style="background-image: url('/images/framing.JPG');"></div>
+        <div class="photo" style="background-image: url('/images/IMG_0662.jpg');"></div>
     </div>
     <header> 
         <nav class="HomeHeader">
-            <a href="/home.html">HOME</a>
+            <a href="home.html">HOME</a>
             <div class="dropdown">
                 <a href="final.html" class="dropbtn">PORTFOLIO</a>
                 <div class="dropdown-content">
@@ -114,8 +120,8 @@
                     <a href="bestphotos.html">Best Photos</a>
                 </div>
             </div>
-            <a href="/aboutme.html">ABOUT ME</a>
-            <a href="/contact.html">CONTACT</a>
+            <a href="aboutme.html">ABOUT ME</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
     </header>
 </body>
