@@ -48,10 +48,23 @@
         button:hover {
             background-color: #0056b3;
         }
+        header, nav {
+            width: 100%; /* Ensures full width */
+            margin: 0; /* No margin */
+            padding: 0; /* No padding */
+        }
+        .HomeHeader {
+            background: black;
+            padding: 10px 20px; /* Adjusted padding for consistency */
+            display: flex;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; /* Ensure full width */
+        }
     </style>
 </head>
 <body>
-        
     <header> 
         <nav class="HomeHeader">
             <a href="home.html">HOME</a>
@@ -79,17 +92,14 @@
         <form action="your-server-endpoint" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
-
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Your Email" required>
-
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Write your message here..." rows="4" required></textarea>
-
             <button type="submit">Send Message</button>
         </form>
     </div>
-        
+    
     <header> 
         <nav class="HomeHeader">
             <a href="home.html">HOME</a>
@@ -111,6 +121,5 @@
             <a href="contact.html">CONTACT</a>
         </nav>
     </header>
-    
 </body>
 </html>
